@@ -12,7 +12,7 @@ public class DemoController {
     private Coach myCoach;
 
     @Autowired
-    public DemoController( Coach theCoach){
+    public DemoController(@Qualifier("trackCoach") Coach theCoach){
         myCoach = theCoach;
     }
     @GetMapping("/dailyworkout")
